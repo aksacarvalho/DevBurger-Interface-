@@ -7,8 +7,8 @@ import { Container,
   LeftContainer, 
   RightContainer, 
   Title, 
-  Link,
-  Button, } from './styles'
+  Button,
+  Link, } from './styles'
 
 export function Login() {
 
@@ -20,7 +20,8 @@ export function Login() {
       <RightContainer>
         <Title>
          Olá, seja bem vindo ao <span>Dev Burguer!</span> 
-Acesse com seu <span>login e senha.</span>
+        <br /> 
+Acesse com seu<span> login e senha.</span>
         </Title>
        <Form action="">
          <InputContainer>
@@ -32,9 +33,9 @@ Acesse com seu <span>login e senha.</span>
              <label>Senha</label>
              <input type="password" />
          </InputContainer>
-         <Link>Esqueci minha senha.</Link> 
          <Button>Entrar</Button>
         </Form>
+        <p>Não possui conta? <a>Clique aqui.</a></p>
        </RightContainer> 
     </Container>
 

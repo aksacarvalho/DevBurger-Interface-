@@ -50,8 +50,9 @@ export const Container = styled.div`
          font-weight: 800;
 
           a {
-             text-decoration: underline;
-          }
+              text-decoration: underline;
+               cursor: pointer;
+            }
        }
  `;
 
@@ -63,6 +64,7 @@ export const Container = styled.div`
 
      span {
        color: #9758a6;
+       font-family: 'Road Rage', sans-serif;
      }
  `;
 

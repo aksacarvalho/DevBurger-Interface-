@@ -38,7 +38,9 @@ Acesse com seu<span> login e senha.</span>
          </InputContainer>
          <Button>Entrar</Button>
         </Form>
-        <p>Não possui conta? <a>Clique aqui.</a></p>
+        <p>
+          Não possui conta? <a>Clique aqui.</a> 
+        </p>
        </RightContainer> 
     </Container>
 

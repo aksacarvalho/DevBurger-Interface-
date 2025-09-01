@@ -24,8 +24,8 @@ export function Login() {
 
   const schema = yup 
  .object({
-  email: yup.string().email().required(),
-  password: yup.string().min(6).required(),
+  email: yup.string().email('Digite uma e-email válido').required('O e-email é obrigatório'),
+  password: yup.string().min(6,'A senha deve ter pelo menos 6 caractere').required('Digite uma senha'),
  })
  .required();
 
@@ -35,7 +35,10 @@ export function Login() {
    formState: { errors },
  } = useForm({
   resolve: yupResolver(schema),
- })
+ });
+
+console.log(errors);
+
  const onSubmit = (data) => console.log(data);
 
    return (
@@ -53,11 +56,13 @@ Acesse com seu<span> login e senha.</span>
          <InputContainer>
              <label>Email</label>
              <input type="email" {...register('email')} />
+             <p>{errors?.email?.mensage}</p>
          </InputContainer>
 
          <InputContainer>
              <label>Senha</label>
              <input type="password" {...register('password')} />
+             <p>{errors?.password?.mensage}</p>
          </InputContainer>
          <Button type="submit">Entrar</Button>
         </Form>

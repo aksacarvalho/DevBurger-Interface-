@@ -103,9 +103,8 @@ export const Container = styled.div`
  p {
      font-size: 14px;
      line-height: 80%;
-     color: #cf3057;
+     color: #ffffff;
      font-weight: 600;
-     height: 10px;
  }
 
  `;

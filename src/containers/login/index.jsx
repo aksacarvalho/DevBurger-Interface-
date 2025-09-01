@@ -16,9 +16,7 @@ import {
 
 
 
-
-
-// ✅ Schema com mensagens personalizadas
+export function Login() {
 const schema = yup.object({
   email: yup
     .string()
@@ -28,9 +26,10 @@ const schema = yup.object({
     .string()
     .min(6, 'A senha deve ter no mínimo 6 caracteres')
     .required('O campo senha é obrigatório'),
-});
+})
 
-export function Login() {
+
+
   const {
     register,
     handleSubmit,

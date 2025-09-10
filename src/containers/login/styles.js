@@ -1,6 +1,7 @@
+import { Link as ReactLink } from "react-router-dom";
 import styled from "styled-components";
-import BackgroundLogin from '../../assets/background-Login.svg'
 
+import BackgroundLogin from '../../assets/background-Login.svg'
 import Background from '../../assets/background.svg'
 
 
@@ -108,6 +109,12 @@ export const Container = styled.div`
  }
 
  `;
+
+ export const Link = styled(ReactLink)`
+ text-decoration: none;
+ color: #fff;
+  `;
+  
 
 
 

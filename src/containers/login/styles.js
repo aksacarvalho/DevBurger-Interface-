@@ -2,7 +2,7 @@ import { Link as ReactLink } from "react-router-dom";
 import styled from "styled-components";
 
 import BackgroundLogin from '../../assets/background-Login.svg'
-import Background from '../../assets/background.svg'
+import Background from '../../assets/background.svg.svg'
 
 
 export const Container = styled.div`
@@ -26,7 +26,7 @@ export const Container = styled.div`
      justify-content: center;
 
      img {
-       width: 80%;
+       width: 65%;
      }
 
  `;

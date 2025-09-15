@@ -9,7 +9,7 @@ import * as yup from 'yup';
 
 
 
-import Logo from '../../assets/logo.svg';
+import Logo from '../../assets/logo.svg.svg';
 import { Button } from '../../components/Button';
 import { api } from '../../services/api';
 

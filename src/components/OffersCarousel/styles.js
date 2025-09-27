@@ -4,7 +4,14 @@ export const Container = styled.div`
 .carousel-item {
     padding-right: 40px;    
 }
-padding-left: 30px;
+overflow-x: hidden;
+
+.react-multi-carousel-list {
+     overflow: visible;
+}
+
+padding-left: 40px;
+padding-bottom: 40px;
 `;
 
 export const Title = styled.h2`
@@ -14,8 +21,9 @@ color:  #61A120;
 padding-bottom: 12px;
 position: relative;
 text-align: center;
-margin: 70px  0;
-margin-top: 70px;
+margin: 70px 0;
+
+
 
 &::after {
     content: '';

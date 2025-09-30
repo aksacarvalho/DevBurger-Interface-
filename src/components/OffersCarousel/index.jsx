@@ -5,7 +5,7 @@ import 'react-multi-carousel/lib/styles.css';
 import { api } from '../../services/api';
 import { Container, Title } from './styles';
 import { CardProduct } from '../CardProduct';
-import { formatPrice } from '../../routes/formatPrice';
+import { formatPrice } from '../../utils/formatPrice';
 
 export function OffersCarousel() {
   const [offers, setOffers] = useState([]);

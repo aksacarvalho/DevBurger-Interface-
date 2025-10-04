@@ -7,7 +7,7 @@ import { Menu } from "../containers/Menu";
 
 export const router = createBrowserRouter([
   {
-    path: '/', // <- ESSENCIAL para evitar o erro 404
+    path: '/home', // <- ESSENCIAL para evitar o erro 404
     element: <Home />,
   },
   {

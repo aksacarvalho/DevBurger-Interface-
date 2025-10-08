@@ -29,7 +29,7 @@ export function Menu(){
   });
    
  
-  useEffect(() => {
+useEffect(() => {
        async function loadCategories() {
          const { data } = await api.get('/categories');
          
@@ -41,9 +41,7 @@ export function Menu(){
               async function loadProducts() {
                  const { data } = await api.get('/products');
            
-            const newProducts = data
-                   .filter((product) => product.offer)
-                   .map((product) => ({
+            const newProducts = data.map((product) => ({
                      currencyValue: formatPrice(product.price),
                      ...product,
                    }));
@@ -89,7 +87,7 @@ export function Menu(){
               navigate(
                 {
                   pathname: '/cardapio',
-                  search:` ?categoria=${category.id},`
+                  search: `?categoria=${category.id}`,
                 },
                 {
                   replace: true,
@@ -106,7 +104,7 @@ export function Menu(){
        
        <ProductsContainer>
          {filteredProducts.map((product) => (
-          <CardProduct product={product} key={product.id} />
+          <CardProduct key={product.id} product={product} />
        ) )}
         </ProductsContainer>
      </Container>

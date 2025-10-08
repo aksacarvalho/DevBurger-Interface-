@@ -40,9 +40,10 @@ margin-bottom: 40px;
 `;
 
 export const ContainerItems = styled.div`
-background: url('${(props) => props.imageUrl}');
-background-position: center;
-background-size: cover;
+  background: url('${(props) => props.imageUrl}');
+  background-size: cover;
+  background-position: center;
+  background-size: cover;
 
 display: flex;
 align-items: center;

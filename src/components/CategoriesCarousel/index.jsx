@@ -50,7 +50,7 @@ export function CategoriesCarousel() {
       <Carousel
         responsive={responsive}
         infinite={true}
-        partialVisbile={false}
+        partialVisibile={false}
         itemClass="carousel-item"
         // autoPlay={true}
         // autoPlaySpeed={5000}
@@ -61,14 +61,13 @@ export function CategoriesCarousel() {
              onClick={() => {
               navigate({
                  pathname: '/cardapio',
-                 search: '/categorias=${category.id}',
+                 search: `?categorias=${category.id}`,
               });
              }}
           >
            {category.name} 
               </CategoryButton>
-           
-          </ContainerItems>
+           </ContainerItems>
         ))}
       </Carousel>
     </Container>

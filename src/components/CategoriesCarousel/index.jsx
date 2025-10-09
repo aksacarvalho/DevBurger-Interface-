@@ -65,7 +65,7 @@ export function CategoriesCarousel() {
               });
              }}
           >
-           {category.name} 
+           {category.name}
               </CategoryButton>
            </ContainerItems>
         ))}

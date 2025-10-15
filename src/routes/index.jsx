@@ -2,13 +2,13 @@ import { createBrowserRouter } from "react-router-dom";
 
 import { Home } from "../containers/Home";
 import { Login } from '../containers/login';
-import { Register } from "../containers/Register";
 import { Menu } from "../containers/Menu";
+import { Register } from "../containers/Register";
 
 export const router = createBrowserRouter([
   {
-    path: '/', // <- ESSENCIAL para evitar o erro 404
-    element: <Menu />,
+    path: '/',
+    element: <Home />, // Aqui talvez você queira usar <Home /> como página inicial
   },
   {
     path: '/login',
@@ -18,9 +18,12 @@ export const router = createBrowserRouter([
     path: '/cadastro',
     element: <Register />,
   },
-
-   {
+  {
     path: '/cardapio',
+    element: <Menu />,
+  },
+  {
+    path: '/menu', // <- Adicionada para evitar erro 404
     element: <Menu />,
   },
 ]);

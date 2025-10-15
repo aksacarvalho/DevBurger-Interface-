@@ -8,7 +8,7 @@ import { Register } from "../containers/Register";
 export const router = createBrowserRouter([
   {
     path: '/',
-    element: <Home />, // Aqui talvez você queira usar <Home /> como página inicial
+    element: <Home />, 
   },
   {
     path: '/login',
@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
     element: <Menu />,
   },
   {
-    path: '/menu', // <- Adicionada para evitar erro 404
+    path: '/menu', 
     element: <Menu />,
   },
 ]);

@@ -24,12 +24,13 @@ export const router = createBrowserRouter([
     path: '/cadastro',
     element: <Register />,
   },
-  {
-    path: '/cardapio',
-    element: <Menu />,
-  },
-  {
-    path: '/menu', 
-    element: <Menu />,
+{
+    path: '/cardapio', 
+    element:(
+      <>
+      <Header/>
+      <Menu />
+      </>
+    ),
   },
 ]);

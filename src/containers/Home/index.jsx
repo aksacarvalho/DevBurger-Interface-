@@ -1,5 +1,4 @@
-import { CategoriesCarousel } from "../../components/CategoriesCarousel";
-import { OffersCarousel } from "../../components/OffersCarousel";
+import { OffersCarousel, CategoriesCarousel } from "../../components";
 import { useUser } from "../../hooks/UserContext";
 import { Banner, Container } from "./style";
 

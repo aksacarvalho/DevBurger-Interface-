@@ -1,9 +1,13 @@
+import TrashIcon from '../../assets/trash.svg'
+
 import { useCart } from '../../hooks/CartContext'
+import { formatPrice } from '../../utils/formatPrice';
 
 import { Table } from '../index';
+import { ButtonGroup, EmptyCart, ProductImage,  ProducTotalPrice,  TrashImage} from './styles';
 
 export function CartItems() {
-   const { cartProducts, decreaseProduct, increaseProduct } = useCart();
+   const { cartProducts, decreaseProduct, increaseProduct, deleteProduct } = useCart();
 
   console.log(cartProducts);
 
@@ -16,21 +20,38 @@ export function CartItems() {
             <Table.Th>Preço</Table.Th>
             <Table.Th>Quantidade</Table.Th>
             <Table.Th>Total</Table.Th>
+            <Table.Th></Table.Th>
          </Table.Tr>
       </Table.Header>
         <Table.Body>{cartProducts?.length ? (
             cartProducts.map(product => (
               <Table.Tr key={product.id}>
                 <Table.Td>
-                 <img src={product.url} />
+                 <ProductImage src={product.url} />
                 </Table.Td>
                 <Table.Td>{product.name}</Table.Td>
                 <Table.Td>{product.currencyValue}</Table.Td>
-                <Table.Td>{product.quantity}</Table.Td>
+                <Table.Td>
+                  <ButtonGroup>
+                    <button onClick={() => decreaseProduct(product.id)}>-</button>
+                 {product.quantity}
+                  <button onClick={() => increaseProduct(product.id)}>+</button>
+                  </ButtonGroup>
+                   </Table.Td>
+                <Table.Td>
+                  <ProducTotalPrice>
+                  {formatPrice(product.quantity * product.price)}
+                  </ProducTotalPrice>
+                  </Table.Td>
+                  <Table.Td>
+                     <TrashImage
+                     src={TrashIcon} alt="lixeira" 
+                     onClick={() => deleteProduct(product.id)} />
+                  </Table.Td>
               </Table.Tr>
             ))
          ) : (
-         <div>Carrinho vazio</div>
+         <EmptyCart>Carrinho vazio</EmptyCart>
          )}
          </Table.Body>
      </Table.Root>

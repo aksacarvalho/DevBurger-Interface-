@@ -4,5 +4,7 @@ export * from './Home';
 export * from './login';
 export * from './Menu';
 export * from './Register';
+export * from './Checkout';
+export * from './CompletePayment';
 
 

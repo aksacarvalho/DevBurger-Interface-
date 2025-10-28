@@ -34,11 +34,12 @@ export function CartResume() {
       });
 
       try {
-        const data = await api.post('/create-payment-intent', { products});
+        const { data } = await api.post('/create-payment-intent', { products });
 
-       navigate('/checkout', {
-         state: data,
-       }) 
+      navigate('/checkout', {
+        state: data,
+      });
+
       } catch (err) {
         toast.error('Erro, tente novamente!', {
           position: "top-right",

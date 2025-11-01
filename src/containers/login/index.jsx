@@ -61,8 +61,12 @@ const schema = yup.object({
       success: {
         render() {
           setTimeout(() => {
-            navigate('/')
-          }, 2000 );
+            if(userData.admin){
+              navigate('/admin/home');
+            } else {
+              navigate('/');
+            }
+           }, 2000 );
           return 'Seja Bem-vindo(a)👌';
         },
       },

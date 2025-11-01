@@ -62,7 +62,7 @@ const schema = yup.object({
         render() {
           setTimeout(() => {
             if(userData.admin){
-              navigate('/admin/home');
+              navigate('/admin/pedidos');
             } else {
               navigate('/');
             }

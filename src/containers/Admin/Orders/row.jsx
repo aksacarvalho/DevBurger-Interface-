@@ -17,7 +17,7 @@ import { formatDate } from '../../../utils/formatDate';
 import { ProductImage, SelectStatus } from './styles';
 import { OrderStatusOptions } from './orderStatus';
 import {api} from '../../../services/api';
-import { Orders } from '.';
+
 
 export function Row({row, setOrders, orders}) {
     //const { row } = props;
@@ -51,12 +51,9 @@ export function Row({row, setOrders, orders}) {
            
             setLoading(false);
         }
+      }
 
-        
-    }
-
-
-    return (
+     return (
         <>
             <TableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
                 <TableCell>

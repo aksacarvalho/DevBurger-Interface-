@@ -20,11 +20,9 @@ import {api} from '../../../services/api';
 
 
 export function Row({row, setOrders, orders}) {
-    //const { row } = props;
+    
     const [open, setOpen] = useState(false);
     const [loading, setLoading] = useState(false);
-
-
 
     async function newStatusOrder(id, status) {
 
@@ -32,17 +30,14 @@ export function Row({row, setOrders, orders}) {
            
             setLoading(true);
 
-           
             await api.put(`/orders/${id}`, {status});
-
-            
+           
             const newOrders = orders.map( order => order._id === id
                 ? {...order, status} 
                 : order
             )
             setOrders(newOrders);
-
-            
+       
         } catch (error) {
             console.error(error);
         }

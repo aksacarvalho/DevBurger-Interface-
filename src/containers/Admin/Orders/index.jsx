@@ -83,7 +83,6 @@ export function Orders() {
                 (order) => order.status === OrderStatusOptions[statusIndex].value //filtra os pedidos de acordo com o status ativo
             )
 
-            console.log(newFiltredOrders);
             setfilteredOrders(newFiltredOrders)
         }
     }, [orders])

@@ -6,6 +6,7 @@ import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
 import { Row } from './row';
+
 import {api} from '../../../services/api';
 import { useEffect, useState } from 'react';
 import {OrderStatusOptions} from './orderStatus';
@@ -15,8 +16,8 @@ import { Filter, FilterOption } from './styles';
 
 export function Orders() {
 
-    const [orders, setOrders] = useState([]) 
-    const [filteredOrders, setfilteredOrders] = useState([]) 
+    const [orders, setOrders] = useState([]) // BACKUP
+    const [filteredOrders, setfilteredOrders] = useState([]) // OS VALORES QUE ESTÃO NA TELA
     const [activeStatus, setActiveStatus] = useState(0) 
 
     const [rows, setRows] = useState([])
@@ -71,7 +72,6 @@ export function Orders() {
 
     }
 
-    
     useEffect(() => {
         if (activeStatus === 0){
             setfilteredOrders(orders);
@@ -88,8 +88,6 @@ export function Orders() {
         }
     }, [orders])
     
-
-
     return (
         <>
             <Filter>

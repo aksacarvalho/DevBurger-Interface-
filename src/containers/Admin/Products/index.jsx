@@ -36,8 +36,8 @@ export function Products() {
     }
   }
 
-  function editProduct(produto) {
-    navigate(`/admin/editar-produto`, { state: { produto } });
+  function editProduct(product) {
+    navigate(`/admin/editar-produto`, { state: { product } });
   }
 
   return (
